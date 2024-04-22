@@ -27,9 +27,9 @@ export default function ShoeFun() {
 
 function Shoe() {
   const ref:any = useRef()
-  const snap = useSnapshot(state)
+  const snap: any = useSnapshot(state)
   const { nodes, materials }: any = useGLTF("shoe-draco.glb")
-  const [hovered, set] = useState(null)
+  const [hovered, set]: any = useState(null)
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
@@ -71,7 +71,7 @@ function Picker() {
   const snap: any = useSnapshot(state)
   return (
     <div style={{ display: snap.current ? "block" : "none" }}>
-      <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => (state.items[snap.current] = color)} />
+      {/* <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color: any) => (state.items[snap.current] = color)} /> */}
       <h1>{snap.current}</h1>
     </div>
   )
